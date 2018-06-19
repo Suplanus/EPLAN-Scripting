@@ -58,4 +58,4 @@ Der EPLAN-Community ist er aufgrund seines Blogs [Suplanus.de](https://suplanus.
 
 
 ### Auflagen
-Es handelt sich hier um die Dokumentation zur zweiten Auflage. Sie finden die Daten der ersten Auflage [hier](https://suplanus.de/buch).
+Es handelt sich hier um die Dokumentation zur zweiten Auflage. Sie finden die Daten der ersten Auflage [hier](https://github.com/Suplanus/EplanElectricP8Automatisieren/releases).
