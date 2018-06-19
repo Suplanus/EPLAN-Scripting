@@ -5,7 +5,8 @@
 
 _Grundlagen und Beispiele zum Erstellen von Scripten in C#_
 
-<br>
+[Website zum Buch: eep8a.de](https://eep8a.de)
+
 
 ### Klappentext
 
@@ -24,9 +25,6 @@ Im Buch werden u.a. folgende Scriptfunktionen behandelt:
 Im Kapitel "Schnittstellenprogrammierung" erlernen Sie das automatisierte Erzeugen von Beschriftungen und PDF-Dateien sowie den Import/Export von Stücklisten und Projekteigenschaften. Darüber hinaus erfahren Sie, wie man Daten über gängige Austauschformate (CSV, XML) in andere Programme exportiert. Das Kapitel "Praxisbeispiele", welches sofort einsetzbare Scripte enthält, die Ihnen das Programmieren eigener Lösungen ersparen, rundet den Inhalt ab.
 
 _Extra: E-Book inside_
-
-<br>
-<br>
 
 ### Vorwort
 
@@ -47,12 +45,9 @@ Großer Dank geht an meinen Chef, Kollegen und Freund Michael Kastl für die Fre
 Ein besonderer Dank gilt Florian Reiter, hier ist aus einem Berater ein Freund geworden. Ein großes Lob geht auch Herrn Andreas Krämer, für die immer sehr guten Hilfestellungen.
 Zu guter Letzt möchte ich mich bei Julia Stepp vom Carl Hanser Verlag für die Hilfe und Unterstützung bedanken.
 
-<br>
 <img src="https://eep8a.de/img/Bild.png" alt="Johann Weiher" width=300/>
 <img src="https://eep8a.de/img/Unterschrift.png" alt="Unterschrift" width=280/>
 
-<br>
-<br>
 
 ### Autorenvita
 
@@ -61,8 +56,6 @@ Zusätzlich programmiert er kundenindividuelle Software im Enterprise-Bereich.
 
 Der EPLAN-Community ist er aufgrund seines Blogs [Suplanus.de](https://suplanus.de) zum Thema "Scripting in EPLAN" bekannt.
 
-<br>
-<br>
 
 ### Auflagen
 Es handelt sich hier um die Dokumentation zur zweiten Auflage. Sie finden die Daten der ersten Auflage [hier](https://suplanus.de/buch).
