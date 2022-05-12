@@ -1,5 +1,4 @@
-
-<img src="https://eep8a.de/img/cover.jpg" alt="EPLAN Electric P8 automatisieren - Cover" style="width: 100%; max-width: 500px;"/>
+<img src="https://eep8a.de/v3/img/cover.jpg" alt="EPLAN Electric P8 automatisieren - Cover" style="width: 100%; max-width: 500px;"/>
 
 **EPLAN Electric P8 automatisieren**
 
@@ -10,43 +9,48 @@ _Grundlagen und Beispiele zum Erstellen von Scripten in C#_
 
 ### Klappentext
 
-Kennen Sie die wiederkehrenden und monotonen Aufgaben, welche viel Zeit bei der Projektierung benötigen? Es gibt gute Nachrichten. Die meisten dieser Aufgaben können Sie per Script automatisieren. Dieses Buch richtet sich an alle EPLAN-Anwender und -Administratoren, die mithilfe von Scripting ihren Workflow beschleunigen möchten, um mehr Zeit für die wesentlichen Aufgaben, nämlich die Konstruktion, zu gewinnen.
+Kennst du die wiederkehrenden Aufgaben, die viel Zeit bei der Projektierung benötigen? Es gibt gute Nachrichten. Viele dieser Aufgaben kannst du per Script automatisieren. Dieses Buch richtet sich an EPLAN-Anwender und -Administratoren, die mithilfe von Scripting ihren Workflow beschleunigen möchten, um mehr Zeit für wesentliche Aufgaben zu gewinnen.
 
-Zu Beginn erfahren Sie, wie Sie Toolbars ohne jegliche Programmierung individuell anpassen. Im Folgenden werden Sie dann schrittweise in die Erstellung von Scripten mit C# eingeführt. Die Komplexität der Programmierung wird dabei gering gehalten, so dass auch Einsteiger ohne Vorkenntnisse folgen können.
+Zu Beginn erfährst du, wie du das Menüband ohne Programmierung individuell anpasst. Im Folgenden wirst du in die Erstellung von Scripten mit C# eingeführt. Die Komplexität der Programmierung wird niedrig gehalten, sodass auch Einsteiger folgen können.
 
-Im Buch werden u.a. folgende Scriptfunktionen behandelt:
+Im Buch werden u. a. folgende Scriptfunktionen behandelt:
 
--	Menüs erzeugen und erweitern
--	Einzelne oder mehrere Einstellungen gleichzeitig per Knopfdruck verändern
--	User Interfaces mit individuellen Steuerelementen (Checkboxen, Ladebalken, Buttons) erstellen
--	Programmsteuerung über Benutzer-Interaktionen u.v.m.
--	Austausch von Daten mit Fremdsysteme
+- Ribbons erzeugen
+- Einzelne oder mehrere Einstellungen gleichzeitig per Knopfdruck verändern
+- User Interfaces mit individuellen Steuerelementen (Checkboxen, Ladebalken, Buttons) erstellen
+- Programmsteuerung über Benutzer-Interaktionen u. v. m.
+- Austausch von Daten mit Fremdsystemen
+- Artikel verändern
 
-Im Kapitel "Schnittstellenprogrammierung" erlernen Sie das automatisierte Erzeugen von Beschriftungen und PDF-Dateien sowie den Import/Export von Stücklisten und Projekteigenschaften. Darüber hinaus erfahren Sie, wie man Daten über gängige Austauschformate (CSV, XML) in andere Programme exportiert. Das Kapitel "Praxisbeispiele", welches sofort einsetzbare Scripte enthält, die Ihnen das Programmieren eigener Lösungen ersparen, rundet den Inhalt ab.
+Diese Auflage berücksichtigt die Neuerungen in Version 2022 von EPLAN Electric P8 sowie in Visual Studio 2022. Zu den überarbeiteten Themen zählen die Erstellung von Menübändern mit selbst gewählten EPLAN-Aktionen sowie die Erstellung von Ribbons mit individualisierten Befehlen.
 
-_Extra: E-Book inside_
+Darüber hinaus erlernst du das automatisierte Erzeugen von Beschriftungen und PDFs sowie den Import/Export von Stücklisten und Projekteigenschaften. Zudem erfährst du, wie Daten über gängige Austauschformate (CSV, XML) in andere Programme exportiert werden. Das Kapitel „Praxisbeispiele“, das sofort einsetzbare Scripte enthält, rundet den Inhalt ab. Auf [plus.hanser-fachbuch.de](https://plus.hanser-fachbuch.de/) und [eep8.de](https://eep8a.de/) findest du kostenloses digitales Zusatzmaterial: Das komplette Projekt mit allen Beispielen und Scripten, die du direkt in EPLAN verwenden kannst, steht dort zur Verwendung bereit.
+
+
 
 ### Vorwort
 
-Liebe Leserinnen und liebe Leser,
+Liebe Leserin, lieber Leser,
 
-mit diesem Buch möchte ich Ihnen einen einfachen und unkomplizierten Einstieg in die Erstellung von Scripten für EPLAN Electric P8 ermöglichen. Das Buch richtet sich an alle EPLAN-Anwender, ganz gleich, ob es sich dabei um regelmäßige oder sporadische Konstrukteure handelt, die mithilfe von Scripting ihre Aufgaben automatisieren wollen. Programmierkenntnisse werden nicht vorausgesetzt. Sie werden erstaunt sein, wie schnell dabei ein Resultat zustande kommt, das Sie begeistert. Schon mit einem kleinen Script, das aus nur ein paar Zeilen besteht, können Sie viel Zeit bei der Projektierung sparen. Auf Grundlage der im Buch vermittelten Informationen werden Sie rasch imstande sein, EPLAN-Aktionen zu verwenden und gegebenenfalls zu erweitern. Darüber hinaus lernen Sie auch, eigene Erweiterungen zu programmieren. Scripte können ab der Version EPLAN Electric P8 Compact genutzt werden. Das API-Modul ist dafür nicht erforderlich.
+mit diesem Buch möchte ich dir einen einfachen Einstieg in die Erstellung von Scripten für EPLAN Electric P8 ermöglichen. Das Buch richtet sich an alle EPLAN-Anwender:innen, ganz gleich, ob es sich dabei um regelmäßige oder sporadische Konstrukteur:innen handelt, die mithilfe von Scripting ihre Aufgaben automatisieren wollen. Programmierkenntnisse werden nicht vorausgesetzt. Du wirst erstaunt sein, wie schnell dabei ein Resultat zustande kommt, das dich begeistert. Schon mit einem kleinen Script, das aus nur ein paar Zeilen besteht, kannst du viel Zeit bei der Projektierung sparen. Auf Grundlage der im Buch vermittelten Informationen wirst du rasch imstande sein, EPLAN-Aktionen zu verwenden und gegebenenfalls zu erweitern. Darüber hinaus lernst du auch, eigene Erweiterungen zu programmieren. Scripte können ab der Lizenz EPLAN Electric P8 Compact genutzt werden. Das API-Modul ist dafür nicht erforderlich.
 
-Im Script, wie in der Programmierung selbst, ist vieles, wenn nicht sogar alles, möglich. Deshalb stellt sich die Frage, in welchem Umfang dieses Buch das Themenfeld abdecken kann. Die Sprache C#, die ich zum Erstellen der Scripte verwende, ist sehr komplex und mit ihrer Beschreibung allein könnte man mehrere Tausend Seiten füllen, ohne irgendeine EPLAN-Funktion zu erklären. Aus diesem Grund beschränke ich mich darauf, die Grundlagen von C# zu vermitteln, die notwendig sind, um neue Scripte zu erstellen oder bestehende zu erweitern bzw. zu verändern. Auch auf die wichtigsten Erweiterungen durch eigenen Programmcode gehe ich ein.
-Alle EPLAN-Aktionen werden anhand von praxisnahen Beispielen beschrieben und erklärt. Viele der Beispiele werden Ihren Workflow beschleunigen. Hinzu kommt, dass mehr Zeit für die wesentlichen Aufgaben, nämlich die der Konstruktion, bleibt. Jeder kennt die wiederkehrenden, monotonen Aufgaben, die z. B. beim Projektabschluss anstehen. Viele Auswertungen und Beschriftungen müssen erzeugt werden, zusätzlich muss der Plan als PDF erstellt werden. All dies können Sie per Knopfdruck erledigen. Wie? Das wird Schritt für Schritt im Buch erklärt.
+Im Script, wie in der Programmierung selbst, ist vieles, wenn nicht sogar alles, möglich. Deshalb stellt sich die Frage, in welchem Umfang dieses Buch das Themenfeld abdecken kann. Die Sprache C#, die zum Erstellen der Scripte verwendet wird, ist sehr komplex, und mit ihrer Beschreibung allein könnte man mehrere Tausend Seiten füllen, ohne irgendeine EPLAN-Funktion zu erklären. Aus diesem Grund beschränke ich mich darauf, die Grundlagen von C# zu vermitteln, die notwendig sind, um neue Scripte zu erstellen oder bestehende zu erweitern bzw. zu verändern. Auch auf die wichtigsten Erweiterungen durch eigenen Programmcode gehe ich ein.
+
+Alle EPLAN-Aktionen werden anhand von praxisnahen Beispielen beschrieben und erklärt. Viele der Beispiele werden deinen Workflow beschleunigen. Hinzu kommt, dass mehr Zeit für die wesentlichen Aufgaben der Konstruktion bleibt. Jeder kennt die wiederkehrenden, monotonen Aufgaben, die z. B. beim Projektabschluss anstehen. Es müssen viele Auswertungen und Beschriftungen erzeugt werden. Zusätzlich muss der Plan als PDF erstellt werden. All dies kannst du per Knopfdruck erledigen. Wie? Das wird Schritt für Schritt im Buch erklärt.
 
 An dieser Stelle möchte ich mich recht herzlich bei allen bedanken, die mir geholfen haben, dieses Buch zu schreiben.
 
-Allen voran danke ich meiner Frau Daniela für die Motivation, das Buch zu schreiben, und die Unterstützung, um genügend Zeit zu finden.
-Vielen Dank auch an meine wundervollen Töchter Leni & Fina für die erfreulichen Unterbrechungen und Ablenkungen beim Schreiben.
+Allen voran danke ich meiner Frau Daniela für die Motivation, das Buch zu schreiben, und die Unterstützung, genügend Zeit dafür zu finden. Vielen Dank auch an meine wundervollen Töchter Leni & Fina für die erfreulichen Unterbrechungen und Ablenkungen beim Schreiben.
 
-Großer Dank geht an meinen Chef, Kollegen und Freund Michael Kastl für die Freiheit, dieses Buch zu schreiben. Es macht einfach Spaß, mit dir zu arbeiten.
+Großer Dank geht an meinen Chef, Kollegen und Freund Michael Kastl für die Freiheit, dieses Buch zu schreiben. Ich danke auch meinen Kollegen Daniel Papp und Stefan Gorbach für die grandiose Zusammenarbeit.
 
-Ein besonderer Dank gilt Florian Reiter, hier ist aus einem Berater ein Freund geworden. Ein großes Lob geht auch Herrn Andreas Krämer, für die immer sehr guten Hilfestellungen.
-Zu guter Letzt möchte ich mich bei Julia Stepp vom Carl Hanser Verlag für die Hilfe und Unterstützung bedanken.
+Ein besonderer Dank gilt Herrn Andreas Krämer für seine sehr guten Hilfestellungen.
 
-<img src="https://eep8a.de/img/Bild.png" alt="Johann Weiher" width=300/>
-<img src="https://eep8a.de/img/Unterschrift.png" alt="Unterschrift" width=280/>
+Zu guter Letzt möchte ich mich bei den Mädels vom Carl Hanser Verlag, Julia Stepp und Rebecca Wehrmann, für die Unterstützung bedanken.
+
+<img src="https://eep8a.de/v3/img/Bild.png" alt="Johann Weiher" width=300/>
+<img src="https://eep8a.de/v3/img/Unterschrift.png" alt="Unterschrift" width=280/>
+
 
 
 ### Autorenvita
@@ -58,4 +62,7 @@ Der EPLAN-Community ist er aufgrund seines Blogs [Suplanus.de](https://suplanus.
 
 
 ### Auflagen
-Es handelt sich hier um die Dokumentation zur zweiten Auflage. Sie finden die Daten der ersten Auflage [hier](https://github.com/Suplanus/EplanElectricP8Automatisieren/releases).
+Es handelt sich hier um die Dokumentation zur dritten Auflage (2022). Dokumentation der vorherigen Auflagen:
+
+- [Auflage 1 (2011)](https://github.com/Suplanus/EPLAN-Electric-P8-automatisieren/archive/refs/tags/v1.0.zip)
+- [Auflage 2 (2018)](https://eep8a.de/v2)
