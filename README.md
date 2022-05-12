@@ -1,4 +1,4 @@
-<img src="https://eep8a.de/v3/img/cover.jpg" alt="EPLAN Electric P8 automatisieren - Cover" style="width: 100%; max-width: 500px;"/>
+<img src="https://eep8a.de/v3/img/cover.jpg" alt="EPLAN Electric P8 automatisieren - Cover" style="width: 100%; max-width: 300px;"/>
 
 **EPLAN Electric P8 automatisieren**
 
