@@ -1,8 +1,6 @@
 ﻿using Eplan.EplApi.RemoteClient;
-using Eplan.EplApi.Starter;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 
 namespace EPLAN_Remote_Client
@@ -11,85 +9,40 @@ namespace EPLAN_Remote_Client
   {
     static void Main(string[] args)
     {
-      List<EplanServerData> instancesActive = GetActiveEplanInstances();
+      List<EplanServerData> instancesActive = GetInstances();
       if (instancesActive.Any())
       {
-        Console.WriteLine("Starte aktive Instanz...");
-        EplanServerData eplanInstanceActive = instancesActive
-          .OrderBy(obj => obj.EplanVersion)
-          .Last();
+        Console.WriteLine("Start active instance...");
+        EplanServerData eplanInstanceActive = instancesActive.OrderBy(obj => obj.EplanVersion).Last();
 
-        ExecuteActive(eplanInstanceActive);
+        Execute(eplanInstanceActive);
       }
       else
       {
-        Console.WriteLine("Keine aktive Instanz gefunden.");
-
-        List<EplanData> instancesInstalled = GetInstalledEplanInstances();
-        instancesInstalled = instancesInstalled
-          .Where(obj =>
-            obj.EplanVariant.Equals("Electric P8") &&
-            obj.EplanVersion.StartsWith("2022"))
-          .OrderBy(obj => obj.EplanVersion)
-          .ToList();
-        if (instancesInstalled.Any())
-        {
-          Console.WriteLine("Starte installierte Instanz...");
-          EplanData eplanInstanceInstalled = instancesInstalled.Last();
-
-          ExecuteInstalled(eplanInstanceInstalled);
-        }
-        else
-        {
-          Console.WriteLine("Keine installierte Instanz gefunden.");
-        }
+        Console.WriteLine("No active instance found.");
       }
 
-      Console.WriteLine("Ausführung abgeschlossen.");
+      Console.WriteLine("Execution completed.");
       Console.ReadKey();
     }
     
-    public static List<EplanServerData> GetActiveEplanInstances()
+    public static List<EplanServerData> GetInstances()
     {
       EplanRemoteClient eplanRemoteClient = new EplanRemoteClient();
       List<EplanServerData> eplanServerDatas = new List<EplanServerData>();
-      eplanRemoteClient.GetActiveEplanServersOnLocalMachine(
-        out eplanServerDatas);
+      eplanRemoteClient.GetActiveEplanServersOnLocalMachine(out eplanServerDatas);
       return eplanServerDatas;
     }
 
-    private static void ExecuteActive(EplanServerData eplanServerData)
+    private static void Execute(EplanServerData eplanServerData)
     {
       EplanRemoteClient eplanRemoteClient = new EplanRemoteClient();
       eplanRemoteClient.SynchronousMode = true;
-      eplanRemoteClient.Connect("localhost",
-        eplanServerData.ServerPort.ToString(),
-        new TimeSpan(0, 0, 0, 5)); // 5s needed to resolve
+      eplanRemoteClient.Connect("localhost", eplanServerData.ServerPort.ToString(), new TimeSpan(0, 0, 0, 5));
 
-      eplanRemoteClient.ExecuteAction("Actionname");
+      eplanRemoteClient.ExecuteAction("ActionName");
       eplanRemoteClient.Disconnect();
       eplanRemoteClient.Dispose();
-    }
-
-    public static List<EplanData> GetInstalledEplanInstances()
-    {
-      EplanFinder eplanFinder = new EplanFinder();
-      List<EplanData> eplanVersions = new List<EplanData>();
-      eplanFinder.GetInstalledEplanVersions(ref eplanVersions, true);
-      return eplanVersions;
-    }
-
-    private static void ExecuteInstalled(EplanData eplanData)
-    {
-      ProcessStartInfo startInfo = new ProcessStartInfo();
-      startInfo.FileName = eplanData.EplanPath;
-
-      const string QUOTE = "\"";
-      string arguments = string.Format("/Variant:{0}{1}{0} {2}",
-        QUOTE, eplanData.EplanVariant, "Actionname");
-
-      startInfo.Arguments = arguments;
-      Process.Start(startInfo);
     }
   }
 }
