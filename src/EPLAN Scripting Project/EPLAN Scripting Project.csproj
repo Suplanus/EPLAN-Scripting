@@ -1,161 +1,58 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{55885150-0660-4BD4-811B-D3556E7BDE3F}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>EPLAN_Scripting_Project</RootNamespace>
     <AssemblyName>EPLAN Scripting Project</AssemblyName>
-    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <LangVersion>13.0</LangVersion>
     <PlatformTarget>x64</PlatformTarget>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Deterministic>true</Deterministic>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="Eplan.EplApi.AFu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=57aaa27e22f7b107, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\EPLAN\Platform\2026.0.1\Bin\Eplan.EplApi.AFu.dll</HintPath>
+    <Reference Include="Eplan.EplApi.AFu">
+      <SpecificVersion>false</SpecificVersion>
+      <HintPath>C:\Program Files\EPLAN\Platform\2027.0.1\Bin\Eplan.EplApi.AFu.dll</HintPath>
     </Reference>
-    <Reference Include="Eplan.EplApi.Baseu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=57aaa27e22f7b107, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\EPLAN\Platform\2026.0.1\Bin\Eplan.EplApi.Baseu.dll</HintPath>
+    <Reference Include="Eplan.EplApi.Baseu">
+      <SpecificVersion>false</SpecificVersion>
+      <HintPath>C:\Program Files\EPLAN\Platform\2027.0.1\Bin\Eplan.EplApi.Baseu.dll</HintPath>
     </Reference>
-    <Reference Include="Eplan.EplApi.Guiu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=57aaa27e22f7b107, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\EPLAN\Platform\2026.0.1\Bin\Eplan.EplApi.Guiu.dll</HintPath>
+    <Reference Include="Eplan.EplApi.Guiu">
+      <SpecificVersion>false</SpecificVersion>
+      <HintPath>C:\Program Files\EPLAN\Platform\2027.0.1\Bin\Eplan.EplApi.Guiu.dll</HintPath>
     </Reference>
-    <Reference Include="Eplan.EplApi.MasterDatau, Version=1.0.0.0, Culture=neutral, PublicKeyToken=57aaa27e22f7b107, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\EPLAN\Platform\2026.0.1\Bin\Eplan.EplApi.MasterDatau.dll</HintPath>
+    <Reference Include="Eplan.EplApi.MasterDatau">
+      <SpecificVersion>false</SpecificVersion>
+      <HintPath>C:\Program Files\EPLAN\Platform\2027.0.1\Bin\Eplan.EplApi.MasterDatau.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
+
   <ItemGroup>
-    <Compile Include="01_FirstSteps\01_Start.cs" />
-    <Compile Include="01_FirstSteps\02_DeclareAction.cs" />
-    <Compile Include="01_FirstSteps\03_DeclareEventHandler.cs" />
-    <Compile Include="01_FirstSteps\04_DeclareRegisterUnregister.cs" />
-    <Compile Include="02_RunActions\01_SingleAction.cs" />
-    <Compile Include="02_RunActions\02_MultipleActions.cs" />
-    <Compile Include="02_RunActions\03_ActionsWithParameter.cs" />
-    <Compile Include="02_RunActions\04_ActionOverloading.cs" />
-    <Compile Include="03_Classes\01_String.cs" />
-    <Compile Include="03_Classes\02_StringPathVariable.cs" />
-    <Compile Include="03_Classes\03_Integer.cs" />
-    <Compile Include="03_Classes\04_ErrorInteger.cs" />
-    <Compile Include="03_Classes\05_Float.cs" />
-    <Compile Include="03_Classes\06_ErrorFloat.cs" />
-    <Compile Include="03_Classes\07_TryCatch.cs" />
-    <Compile Include="03_Classes\08_BaseException.cs" />
-    <Compile Include="03_Classes\09_ParameterString.cs" />
-    <Compile Include="03_Classes\10_ParameterInteger.cs" />
-    <Compile Include="03_Classes\11_MessageBox.cs" />
-    <Compile Include="03_Classes\12_OwnClass.cs" />
-    <Compile Include="04_CodeFlow\01_IfString.cs" />
-    <Compile Include="04_CodeFlow\02_ElseIf.cs" />
-    <Compile Include="04_CodeFlow\03_Switch.cs" />
-    <Compile Include="04_CodeFlow\04_MethodMessageBox.cs" />
-    <Compile Include="04_CodeFlow\05_MethodInteger.cs" />
-    <Compile Include="04_CodeFlow\06_MethodReturnValue.cs" />
-    <Compile Include="04_CodeFlow\07_MethodOverloading.cs" />
-    <Compile Include="04_CodeFlow\08_Decider.cs" />
-    <Compile Include="04_CodeFlow\09_ListSelectDecisionContext.cs" />
-    <Compile Include="05_ActionsWithValues\01_ActionWithReturnValue.cs" />
-    <Compile Include="05_ActionsWithValues\02_ActionWithActionCallingContext.cs" />
-    <Compile Include="06_Settings\01_SetString.cs" />
-    <Compile Include="06_Settings\02_SetBool.cs" />
-    <Compile Include="06_Settings\03_SetInteger.cs" />
-    <Compile Include="06_Settings\04_ReadString.cs" />
-    <Compile Include="06_Settings\05_ReadBool.cs" />
-    <Compile Include="06_Settings\06_ReadInteger.cs" />
-    <Compile Include="06_Settings\07_Import.cs" />
-    <Compile Include="06_Settings\08_ImportProjectSettings.cs" />
-    <Compile Include="07_RibbonContextMenus\01_Ribbon.cs" />
-    <Compile Include="07_RibbonContextMenus\02_ContextMenu.cs" />
-    <Compile Include="07_RibbonContextMenus\03_ContextMenuId.cs" />
-    <Compile Include="08_Progressbar\01_SimpleProgress.cs" />
-    <Compile Include="08_Progressbar\02_EnhancedProgress.cs" />
-    <Compile Include="09_Forms\01_Template.cs">
+    <Compile Update="09_Forms\01_Template.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="09_Forms\02_FormsExample.cs">
+    <Compile Update="09_Forms\02_FormsExample.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="09_Forms\03_Cursor.cs" />
-    <Compile Include="09_Forms\04_ProjectSearch.cs">
+    <Compile Update="09_Forms\04_ProjectSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="10_Debug\02_DebugTest.cs" />
-    <Compile Include="10_Debug\01_DebugSetting.cs" />
-    <Compile Include="11_ExternalApplications\01_RunProcess.cs" />
-    <Compile Include="11_ExternalApplications\02_RunMultipleProcesses.cs" />
-    <Compile Include="12_FilesFolders\01_CheckFolder.cs" />
-    <Compile Include="12_FilesFolders\02_CheckFile.cs" />
-    <Compile Include="12_FilesFolders\03_DeleteFile.cs" />
-    <Compile Include="12_FilesFolders\04_FileWithDateTimeStamp.cs" />
-    <Compile Include="13_FilesOpenSave\01_SaveFileDialog.cs" />
-    <Compile Include="13_FilesOpenSave\02_OpenFileDialog.cs" />
-    <Compile Include="13_FilesOpenSave\03_CheckFilenames.cs" />
-    <Compile Include="13_FilesOpenSave\04_FileSelectDecisionContext.cs" />
-    <Compile Include="16_Export\01_Label.cs" />
-    <Compile Include="16_Export\02_LabelWithCheck.cs" />
-    <Compile Include="16_Export\03_PdfOnClosing.cs" />
-    <Compile Include="14_FilesWrite\01_TextFileWrite.cs" />
-    <Compile Include="14_FilesWrite\02_XmlWrite.cs" />
-    <Compile Include="15_FilesRead\01_TextFileRead.cs" />
-    <Compile Include="15_FilesRead\02_XmlFileRead.cs" />
-    <Compile Include="15_FilesRead\03_XmlFileOwnClassRead.cs" />
-    <Compile Include="17_Parts\01_CountParts.cs" />
-    <Compile Include="17_Parts\02_ChangePartProperties.cs" />
-    <Compile Include="99_AdditionalExamples\01_Compress.cs" />
-    <Compile Include="99_AdditionalExamples\02_ChangeLayer.cs" />
-    <Compile Include="99_AdditionalExamples\03_Edit.cs" />
-    <Compile Include="99_AdditionalExamples\04_ExecuteScript.cs" />
-    <Compile Include="99_AdditionalExamples\05_ProjectAction.cs" />
-    <Compile Include="99_AdditionalExamples\06_XEsSetProjectPropertyAction.cs" />
-    <Compile Include="99_AdditionalExamples\07_Backup.cs" />
-    <Compile Include="99_AdditionalExamples\08_Restore.cs" />
-    <Compile Include="99_AdditionalExamples\09_ProjectManagement.cs" />
-    <Compile Include="99_AdditionalExamples\10_SelectionSet.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+
   <ItemGroup>
-    <EmbeddedResource Include="09_Forms\01_Template.resx">
+    <EmbeddedResource Update="09_Forms\01_Template.resx">
       <DependentUpon>01_Template.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="09_Forms\02_FormsExample.resx">
+    <EmbeddedResource Update="09_Forms\02_FormsExample.resx">
       <DependentUpon>02_FormsExample.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="09_Forms\04_ProjectSearch.resx">
+    <EmbeddedResource Update="09_Forms\04_ProjectSearch.resx">
       <DependentUpon>04_ProjectSearch.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
