@@ -40,7 +40,7 @@ namespace EPLAN_Remote_Client
       eplanRemoteClient.SynchronousMode = true;
       eplanRemoteClient.Connect("localhost", eplanServerData.ServerPort.ToString(), new TimeSpan(0, 0, 0, 5));
 
-      eplanRemoteClient.ExecuteAction("ActionName");
+      eplanRemoteClient.ExecuteAction("NOT_FOUND");
       eplanRemoteClient.Disconnect();
       eplanRemoteClient.Dispose();
     }
