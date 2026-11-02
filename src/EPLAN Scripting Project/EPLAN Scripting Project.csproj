@@ -16,19 +16,19 @@
   <ItemGroup>
     <Reference Include="Eplan.EplApi.AFu">
       <SpecificVersion>false</SpecificVersion>
-      <HintPath>C:\Program Files\EPLAN\Platform\2027.0.1\Bin\Eplan.EplApi.AFu.dll</HintPath>
+      <HintPath>C:\Program Files\EPLAN\Platform\2027.0.3\Bin\Eplan.EplApi.AFu.dll</HintPath>
     </Reference>
     <Reference Include="Eplan.EplApi.Baseu">
       <SpecificVersion>false</SpecificVersion>
-      <HintPath>C:\Program Files\EPLAN\Platform\2027.0.1\Bin\Eplan.EplApi.Baseu.dll</HintPath>
+      <HintPath>C:\Program Files\EPLAN\Platform\2027.0.3\Bin\Eplan.EplApi.Baseu.dll</HintPath>
     </Reference>
     <Reference Include="Eplan.EplApi.Guiu">
       <SpecificVersion>false</SpecificVersion>
-      <HintPath>C:\Program Files\EPLAN\Platform\2027.0.1\Bin\Eplan.EplApi.Guiu.dll</HintPath>
+      <HintPath>C:\Program Files\EPLAN\Platform\2027.0.3\Bin\Eplan.EplApi.Guiu.dll</HintPath>
     </Reference>
     <Reference Include="Eplan.EplApi.MasterDatau">
       <SpecificVersion>false</SpecificVersion>
-      <HintPath>C:\Program Files\EPLAN\Platform\2027.0.1\Bin\Eplan.EplApi.MasterDatau.dll</HintPath>
+      <HintPath>C:\Program Files\EPLAN\Platform\2027.0.3\Bin\Eplan.EplApi.MasterDatau.dll</HintPath>
     </Reference>
   </ItemGroup>
 

@@ -15,12 +15,12 @@
   <ItemGroup>
     <Reference Include="Eplan.EplApi.RemoteClientu">
       <SpecificVersion>false</SpecificVersion>
-      <HintPath>C:\Program Files\EPLAN\Platform\2027.0.1\Bin\Eplan.EplApi.RemoteClientu.dll</HintPath>
+      <HintPath>C:\Program Files\EPLAN\Platform\2027.0.3\Bin\Eplan.EplApi.RemoteClientu.dll</HintPath>
       <Private>true</Private>
     </Reference>
     <Reference Include="Eplan.EplApi.Remotingu">
       <SpecificVersion>false</SpecificVersion>
-      <HintPath>C:\Program Files\EPLAN\Platform\2027.0.1\Bin\Eplan.EplApi.Remotingu.dll</HintPath>
+      <HintPath>C:\Program Files\EPLAN\Platform\2027.0.3\Bin\Eplan.EplApi.Remotingu.dll</HintPath>
       <Private>true</Private>
     </Reference>
   </ItemGroup>
