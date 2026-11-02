@@ -1,12 +1,11 @@
-﻿using System.Windows.Forms;
+﻿using System.Diagnostics;
+using System.Windows.Forms;
 using Eplan.EplApi.Base;
 using Eplan.EplApi.Gui;
 using Eplan.EplApi.Scripting;
 
 class _07_RibbonContextMenus_01_Ribbon
 {
-  private const string ACTION_NAME = "RibbonAction";
-
   private MultiLangString TAB_NAME
   {
     get
@@ -54,6 +53,34 @@ class _07_RibbonContextMenus_01_Ribbon
     string imagePath = @"C:\test\test.svg";
     RibbonIcon ribbonIcon2 = ribbonBar.AddIcon(imagePath);
     ribbonCommandGroup2.AddCommand(commandText, ACTION_NAME, tooltip, description, ribbonIcon2);
+    
+    ribbonIcon2.IsLarge = true;
+
+    // Dropdown-Button
+    var rootDropDown = new RibbonCommandInfo("Dropdown-Button", "")
+    {
+      IsDropdownRoot = true,
+      IsSplitButton = false,
+      Icon = ribbonIcon2
+    };
+    var rootCommandDropDown = ribbonCommandGroup2.AddCommand(rootDropDown);
+    var subDropDown1 = new RibbonCommandInfo("Sub-Button 1", ACTION_NAME_SUB1);
+    rootCommandDropDown.AddSubCommand(subDropDown1);
+    var subDropDown2 = new RibbonCommandInfo("Sub-Button 2", ACTION_NAME_SUB2);
+    rootCommandDropDown.AddSubCommand(subDropDown2);
+
+    // Split-Button
+    var rootDropSplit = new RibbonCommandInfo("Split-Button", ACTION_NAME_SPLIT)
+    {
+      IsDropdownRoot = true,
+      IsSplitButton = true,
+      Icon = ribbonIcon2
+    };
+    var rootCommandSplit = ribbonCommandGroup2.AddCommand(rootDropSplit);
+    var subSplit1 = new RibbonCommandInfo("Sub-Button 1", ACTION_NAME_SUB1);
+    rootCommandSplit.AddSubCommand(subSplit1);
+    var subSplit2 = new RibbonCommandInfo("Sub-Button 2", ACTION_NAME_SUB2);
+    rootCommandSplit.AddSubCommand(subSplit2);
   }
 
   [DeclareUnregister]
@@ -67,9 +94,32 @@ class _07_RibbonContextMenus_01_Ribbon
     }
   }
 
+  private const string ACTION_NAME = "RibbonAction";
   [DeclareAction(ACTION_NAME)]
   public void Function()
   {
     MessageBox.Show("Action was executed!");
   }
+  
+  private const string ACTION_NAME_SPLIT = "SplitAction";
+  [DeclareAction(ACTION_NAME_SPLIT)]
+  public void FunctionSplit()
+  {
+    MessageBox.Show("SplitAction was executed!");
+  }
+  
+   private const string ACTION_NAME_SUB1 = "SubAction1";
+   [DeclareAction(ACTION_NAME_SUB1)]
+   public void FunctionSub1()
+   {
+     MessageBox.Show("SubAction1 was executed!");
+   }
+   
+   private const string ACTION_NAME_SUB2 = "SubAction2";
+   [DeclareAction(ACTION_NAME_SUB2)]
+   public void FunctionSub2()
+   {
+     MessageBox.Show("SubAction2 was executed!");
+   }
+
 }
